@@ -64,7 +64,7 @@ Ayrık Kosinüs Dönüşümü, ayrık veri noktalarını kosinüs dalgalarının
 
 İşin matematiğine baktığımız da, eğer elimizde 8 uzunluğunda bir sinyalimiz varsa onu farklı frekanslarda 8 kosinüs dalgası kullanarak temsil ederiz. Aynı durum bir görüntü için de geçerlidir. JPEG de her görüntü 8x8 piksel gruba bölünür ve bu piksel gruplarının her biri ayrı ayrı kosinüs dönüşümü ile ayrı ayrı kodlanır. 
 
-Kosinüs fonksiyonlarının 8x8 matrisi şöyle görünür:
+**Kosinüs fonksiyonlarının 8x8 matrisi şöyle görünür:**
 
 ![image](https://user-images.githubusercontent.com/72580629/228060534-3f6f298c-964a-4ffc-97fa-2e7d5de29e53.png)
 
@@ -79,17 +79,24 @@ Herhangi bir tür 8x8 lik görüntü oluşturmak için yapmamız gereken aynı a
 JPEG'in kayıplı bir sıkıştırma algoritması olduğunu biliyoruz ama şimdiye kadar kayıplı bir şey yapmadık. Sadece 8x8 blok YUV bileşenlerini hiçbir bilgi kaybı olmadan 8x8 blok kosinüs fonksiyonlarına dönüştürdük. Kuantalama adımı ile verideki fazlalıklar atılır kayıplar burada meydana gelir. Kuantalama ile daha az önemli olan yüksek frekanslı ayrık kosinüs dönüşüm katsayılarının çoğunu sıfıra indirme amaçlanır. Sıfırların sayısı ne kadar fazla olursa görüntünün sıkıştırma oranı o kadar yüksek olacaktır. Yüksek frekanslı bilgileri bir kez kaybettiğinizde, ortaya çıkan JPEG görüntüsünden tam orijinal görüntüyü yeniden oluşturamazsınız. Gereken sıkıştırma seviyesine bağlı olarak, bazı genel niceleme matrisleri kullanılır. DCT katsayı matrisini niceleme matrisiyle eleman bazında böleriz, sonucu bir tamsayıya yuvarlarız ve nicelenmiş matrisi elde ederiz. Bir örnek üzerinden gidelim.
 
 * **DCT matrisi:**
+
 ![image](https://user-images.githubusercontent.com/72580629/228061117-aec7306c-4abe-4b3c-abbd-48fa4a6c2aa1.png)
+
 * **Niceleme matrisi  (yaygın):**
+
 ![image](https://user-images.githubusercontent.com/72580629/228061183-45d9be58-ea8f-403a-a685-16a5c27ac81f.png)
+
 * **Elde edilen nicelenmiş matris:**
+
 ![image](https://user-images.githubusercontent.com/72580629/228061261-c6d9f993-0fa4-463c-b4ff-819f196332aa.png)
+
 
 İnsanlar yüksek frekanslı bilgileri göremese de, 8x8 görüntü parçalarından çok fazla bilgi kaldırırsanız, genel görüntü bloklu görünür. Bu kuantize matriste, ilk değer DC değeri olarak adlandırılır ve değerlerin geri kalanı AC değerleridir. Tüm nicelenmiş matrislerden DC değerlerini alırsak ve yeni bir görüntü oluşturursak, esasen orijinal görüntünün 1/8 çözünürlüğünde bir küçük resim elde ederiz.
 
-##Zig-zag
+## Zig-zag
 
 ![image](https://user-images.githubusercontent.com/72580629/228061449-bfbd1be2-c975-40ca-b2ee-8c78df4412ec.png)
+
 Bu nicelenmiş matrise sahip olduğumuzu hayal edelim. Zig-Zag kodlamanın çıktısı [15 14 13 12 11 10 9 8 0 0 ... 0] şeklinde  olacaktır.
 
 ![image](https://user-images.githubusercontent.com/72580629/228061393-bcf547d6-0102-4b5f-afd3-2f38224b02c9.png)
