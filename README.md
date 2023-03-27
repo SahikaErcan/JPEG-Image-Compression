@@ -23,3 +23,4 @@ Sadece renge veya belirginliğe baktığımızda aynı görüntünün önemli ö
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/617ea3fe-06fa-474d-aa5a-c21d24cc085d/Untitled.png)
 
 JPEG algoritmasının bu görüntüyü nasıl kullandığını inceleyelim.
+
