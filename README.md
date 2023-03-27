@@ -1,7 +1,7 @@
 # JPEG-Image-Compression
 JPEG yaygın olarak kullanılan kayıplı sıkıştırma tekniğidir. Kayıplı sıkıştırma da kalite faktörüne bağlı olarak görüntünün sıkıştırma oranı ve bozulma miktarı istenilen seviyede ayarlanabilmektedir. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cc74ea4f-063c-4e95-a1bd-0e27dcf69495/Untitled.png)
+![image](https://user-images.githubusercontent.com/72580629/227977819-a4c8c487-d464-4024-b0fe-d8052d18a34c.png)
 
 JPEG sıkıştırma yöntemi, aşağıdaki adımlardan oluşmaktadır.
 
@@ -16,11 +16,11 @@ JPEG Algoritmasının detaylarına bakmadan önce jpeg in yararlandığı **insa
 
 Bir çiçek görüntüsünü inceleyelim. Resme baktığımızda sadece parlaklığı gösteren siyah beyaz versiyon, tam renkli görüntü kadar ayrıntılı görünüyor.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/032ccbf2-06eb-4ade-9541-09ac7877b5e1/Untitled.png)
+![image](https://user-images.githubusercontent.com/72580629/227978004-52e99ae4-cb59-4246-9047-1042bfc10c26.png)
 
 Sadece renge veya belirginliğe baktığımızda aynı görüntünün önemli ölçüde daha az ayrıntılı göründüğünü görüyoruz.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/617ea3fe-06fa-474d-aa5a-c21d24cc085d/Untitled.png)
+
 
 JPEG algoritmasının bu görüntüyü nasıl kullandığını inceleyelim.
 
