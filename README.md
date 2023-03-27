@@ -112,7 +112,11 @@ JPEG'de, Huffman kodlamasını kullanarak DCT (Ayrık Kosinüs Dönüşümü) bi
 
 
 
-- **Kaynaklar:**
+
+
+
+* **Kaynaklar:**
+
     - [https://www.youtube.com/watch?v=Q2aEzeMDHMA&ab_channel=Computerphile](https://www.youtube.com/watch?v=Q2aEzeMDHMA&ab_channel=Computerphile)
     - [https://www.youtube.com/watch?v=Kv1Hiv3ox8I&ab_channel=BranchEducation](https://www.youtube.com/watch?v=Kv1Hiv3ox8I&ab_channel=BranchEducation)
     - [https://yasoob.me/posts/understanding-and-writing-jpeg-decoder-in-python/](https://yasoob.me/posts/understanding-and-writing-jpeg-decoder-in-python/)
