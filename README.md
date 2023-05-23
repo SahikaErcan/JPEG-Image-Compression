@@ -1,4 +1,8 @@
 # JPEG-Image-Compression
+```
+VIDEO: https://youtu.be/LzXKH4CnWhI
+```
+
 JPEG yaygın olarak kullanılan kayıplı sıkıştırma tekniğidir. Kayıplı sıkıştırma da kalite faktörüne bağlı olarak görüntünün sıkıştırma oranı ve bozulma miktarı istenilen seviyede ayarlanabilmektedir. 
 
 ![image](https://user-images.githubusercontent.com/72580629/227977819-a4c8c487-d464-4024-b0fe-d8052d18a34c.png)
