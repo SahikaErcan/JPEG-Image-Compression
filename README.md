@@ -3,16 +3,15 @@
 VIDEO: https://youtu.be/LzXKH4CnWhI
 ```
 
-JPEG yaygın olarak kullanılan kayıplı sıkıştırma tekniğidir. Kayıplı sıkıştırma da kalite faktörüne bağlı olarak görüntünün sıkıştırma oranı ve bozulma miktarı istenilen seviyede ayarlanabilmektedir. 
-
-![image](https://user-images.githubusercontent.com/72580629/227977819-a4c8c487-d464-4024-b0fe-d8052d18a34c.png)
-
+JPEG yaygın olarak kullanılan kayıplı sıkıştırma algoritmasıdır. Kayıplı sıkıştırma da kalite faktörüne bağlı olarak görüntünün sıkıştırma oranı ve bozulma miktarı istenilen seviyede ayarlanabilmektedir. Resmin kalitesinden bir miktar ödün verilerek sıkıştırma uygulanır. Böylece dosya boyutu küçültülür. JPEG'ler birçok rengin bulunduğu ve birbirine derece derece geçtiği, belirgin sınırlar içermeyen fotoğraflar için idealdir.
 JPEG sıkıştırma yöntemi, aşağıdaki adımlardan oluşmaktadır.
 
 1. Öncelikle bir görüntü YCbCr renk uzayına dönüştürülür ve 8x8’lik bloklara ayrılır.
 2. Her bloğa Ayrık Kosinüs Dönüşümü(AKD) uygulanır.
 3. AKD katsayıları bazı kuantalama kurallarına göre kuantize edilir.
 4. Entropi kodlama yöntemi gerçekleştirilir.
+
+![image](https://user-images.githubusercontent.com/72580629/227977819-a4c8c487-d464-4024-b0fe-d8052d18a34c.png)
 
 JPEG Algoritmasının detaylarına bakmadan önce jpeg in yararlandığı **insan gözlerini inceleyelim.**
 
@@ -26,7 +25,6 @@ Sadece renge veya belirginliğe baktığımızda aynı görüntünün önemli ö
 
 ![image](https://user-images.githubusercontent.com/72580629/228059535-87c72bfe-7d1e-4833-90f5-4a62ea73c30f.png)
 
-JPEG algoritmasının bu görüntüyü nasıl kullandığını inceleyelim.
 
 ## Renk Uzayı Dönüşümü
 
@@ -52,7 +50,7 @@ Görüntümüz sadece yaptığımız bu iki adımlık işlem ile orijinal boyutu
 
 Ayrık kosinüs ve kuantalama adımları, görüntünün her bölümünden geçer ve yüksek frekansta değişen belirginlik veya parlaklığa sahip alanları bulur. Örnek olarak parlaklık bileşeni görüntüsünü kullanalım. Aynı işlemin iki belirginlik bileşeniyle de gerçekleştiğini bilmeliyiz. Öncelikle tüm görüntü her biri 0 ile 255 arasında değerlerden oluşan 64 piksellik 8x8 lik bloklara ayrılır. 8 bitlik bir görüntü için, orijinal blokta her öğe [0,255] aralığında yer alır. Orijinal bloktaki her öğeden aralığın orta noktası (128 değeri) çıkarıldıktan sonra sıfır etrafında ortalanan veri aralığı üretilir, böylece değiştirilen aralık [0,255]'ten [-128,127]'ye kaydırılır. Burada -128 siyahı 127 ise beyazı temsil eder. 
 
-**Daha sonra her bloğa Ayrı Kosinüs Değişimi uygulayarak elde edilen bloğu sıkıştırmak için kuantalama kullanır.**
+**Daha sonra her bloğa Ayrı Kosinüs Dönüşümü uygulayarak elde edilen bloğu sıkıştırmak için kuantalama kullanır.**
 
 Bu ifademizi detaylandıralım.
 
